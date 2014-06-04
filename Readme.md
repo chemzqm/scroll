@@ -2,6 +2,8 @@
 
 High performance scroll to component with easy to use API.
 
+[demo](http://chemzqm.github.io/scroll/)
+
 ## Install
 
     component install chemzqm/scroll

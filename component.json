@@ -1,0 +1,24 @@
+{
+  "name": "scroll",
+  "repository": "chemzqm/scroll",
+  "description": "high performance scroll to component",
+  "version": "0.0.1",
+  "keywords": [],
+  "demo": "http://chemzqm.github.io/scroll/",
+  "dependencies": {
+    "component/raf": "*",
+    "component/tween": "*"
+  },
+  "development": {
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "templates": [
+  ],
+  "styles": [
+  ]
+}
+

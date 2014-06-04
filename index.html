@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example of scroll</title>
+  <style type="text/css" media="screen">
+    .btn {
+      border: 2px solid #333;
+      background: #333;
+      padding: 10px 30px;
+      color: #FFF;
+      font-size: 14px;
+      border-radius: 6px;
+      outline: none;
+      margin: 30px auto;
+      width: 100px;
+      display: block;
+    }
+    .scrollable {
+      height: 200px;
+      width: 200px;
+      margin: 60px auto;
+      overflow: auto;
+    }
+    .scrollable > div {
+      width: 900px;
+      height: 900px;
+    }
+  </style>
+  <script type="text/javascript" src="build/build.js">
+  </script>
+</head>
+<body>
+  <div class="scrollable">
+    <div></div>
+  </div>
+  <button class="btn">both</button>
+  <button class="btn top">top</button>
+  <button class="btn left">left</button>
+  <script>
+    var scroll = require('scroll');
+    var btn = document.querySelector('.btn');
+    var scrollable = document.querySelector('.scrollable');
+
+    btn.addEventListener('click', function() {
+      scroll(scrollable, {
+          ease: 'linear',
+          duration: 1000
+        })
+        .top(300)
+        .left(300)
+        .end(function() {
+        })
+    });
+
+    var topBtn = document.querySelector('.top');
+    topBtn.addEventListener('click', function() {
+      scroll(scrollable, {
+          ease: 'linear',
+          duration: 1000
+        })
+        .top(300)
+        .end(function() {
+        })
+    });
+
+    var leftBtn = document.querySelector('.left');
+    leftBtn.addEventListener('click', function() {
+      scroll(scrollable, {
+          duration: 1000
+        })
+        .left(300)
+        .end(function() {
+        })
+    });
+  </script>
+</body>
+</html>
